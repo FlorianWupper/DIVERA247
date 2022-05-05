@@ -35,7 +35,7 @@ async function createWidget(items) {
 
 console.log(data)
 
- if(!data || !data.length) {
+ if(!data) {
    const errorList = new ListWidget()
    errorList.addText("Fehler.")
    return errorList
@@ -45,7 +45,7 @@ console.log(data)
  header.centerAlignText()
  header.font = Font.mediumSystemFont(10)
 
- label = list.addText(data[0].name)
+ label = list.addText(data.data[0].name)
  label.font = Font.mediumSystemFont(20)
  label.centerAlignText()
  const country = list.addText("Deutschland")
@@ -55,34 +55,6 @@ console.log(data)
 
 
  list.addSpacer()
-
- // fetch new incidents
- let location
-
- if(args.widgetParameter) {
-
-   const fixedCoordinates = args.widgetParameter.split(",").map(parseFloat)
-
-   location = {
-     latitude: fixedCoordinates[0],
-     longitude: fixedCoordinates[1]
-   }
-
- } else {
-
-   Location.setAccuracyToThreeKilometers()
-     try {
-     location = await Location.current()
-     console.log('get current lat/lon')
-     saveIncidenceLatLon(location)
-   } catch(e) {
-     console.log('using saved lat/lon')
-     location = getsavedIncidenceLatLon()
-   }
- }
-
-
- 
 
 
 /*
