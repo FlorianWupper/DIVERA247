@@ -31,17 +31,12 @@ async function createWidget(items) {
  header.leftAlignText()
  header.font = Font.mediumSystemFont(10)
 
- var schritt;
- for (schritt = 0; schritt < apiData.lenght; schritt++) {
-    var kfz_name = apiData.data[schritt].name
-    var fms_status = apiData.data[schritt].fmsstatus
+var kfz_name = apiData.data[0].name
+var fms_status = apiData.data[0].fmsstatus
 
-    label += list.addText(" " + kfz_name + ": " + fms_status.toString())
-    
- }
-
-    label.font = Font.mediumSystemFont(10)
-    label.leftAlignText()
+label += list.addText(kfz_name + ": " + fms_status.toString())
+label.font = Font.mediumSystemFont(10)
+label.leftAlignText()
  
 
  return list
