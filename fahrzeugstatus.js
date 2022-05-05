@@ -10,15 +10,15 @@ Script.setWidget(widget)
 Script.complete()
 
 async function createWidget(items) {
- let apiData, attr, header, label
+ let apiData, header, label
 
    const list = new ListWidget()
 
 
- // fetch new cases
+ // fetch vehicle informations
  apiData = await new Request(divera247FahrzeugStatusAPI).loadJSON()
 
-console.log(apiData)
+// console.log(apiData)
 
  if(!apiData) {
    const errorList = new ListWidget()
@@ -29,19 +29,20 @@ console.log(apiData)
  
  header = list.addText("🚒 Fahrzeugstatus ".toUpperCase())
  header.leftAlignText()
- header.font = Font.mediumSystemFont(12)
+ header.font = Font.mediumSystemFont(10)
 
  var schritt;
  for (schritt = 0; schritt < apiData.lenght; schritt++) {
-    const kfz_name = apiData.data[schritt].name
-    const fms_status = apiData.data[schritt].fmsstatus
+    var kfz_name = apiData.data[schritt].name
+    var fms_status = apiData.data[schritt].fmsstatus
 
-    list.addText(kfz_name + ": " + fms_status.toString())
+    label += list.addText(" " + kfz_name + ": " + fms_status.toString())
+    
  }
 
- label = list.toString()
- label.font = Font.mediumSystemFont(10)
- label.leftAlignText()
+    label.font = Font.mediumSystemFont(10)
+    label.leftAlignText()
+ 
 
  return list
 }
