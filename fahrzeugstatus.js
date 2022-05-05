@@ -1,5 +1,5 @@
 ﻿// Licence: Alexander Hartkopf
-const divera247FahrzeugStatusAPI = `https://app.divera247.com/api/v2/pull/vehicle-status?accesskey=`+args.widgetParameter;
+const divera247FahrzeugStatusAPI = 'https://app.divera247.com/api/v2/pull/vehicle-status?accesskey='+args.widgetParameter;
 
 let widget = await createWidget()
 if (!config.runsInWidget) {
@@ -33,9 +33,15 @@ async function createWidget(items) {
 const kfz_name = apiData.data[0].name
 const fms_status = apiData.data[0].fmsstatus
 
-label = list.addText(kfz_name + ": " + fms_status)
-label.centerAlignText()
-label.font = Font.mediumSystemFont(12) 
+for (let i = 0; i < apiData.length; i++) {
+    text += apiData.data[i].name + "<br>";
+
+    label = list.addText(text)
+    label.leftAlignText()
+    label.font = Font.mediumSystemFont(12) 
+}
+
+
 
  
  return list
