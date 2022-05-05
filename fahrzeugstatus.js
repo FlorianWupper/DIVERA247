@@ -11,8 +11,7 @@ const img = await i.loadImage()
 const img2 = await j.loadImage()
 
 
-const divera247FahrzeugStatusAPI = 'https://app.divera247.com/api/v2/pull/vehicle-status?accesskey=1u1WAMOeD8SIu1iqNZ60Afmf2ZFH1RtF3zh3AkhryvCAwaMAG9O9HCAacuc_7GiJ'
-//'+args.widgetParameter;
+const divera247FahrzeugStatusAPI = 'https://app.divera247.com/api/v2/pull/vehicle-status?accesskey='+args.widgetParameter;
 
 let widget = await createWidget()
 if (!config.runsInWidget) {
