@@ -20,8 +20,13 @@ Script.complete()
 
 async function createWidget(items) {
  let apiData, header, label, sub
+    
 
    const list = new ListWidget()
+  
+  
+    list.backgroundColor= new Color("001e4b")
+    list.textColor = new Color("fa0019")
    let image = list.addImage(img2)
   image.imageSize = new Size(40,40)
   image.rightAlignImage()
@@ -43,6 +48,7 @@ async function createWidget(items) {
  header = list.addText("🚒 Fahrzeugstatus ".toUpperCase())
  header.leftAlignText()
  header.font = Font.mediumSystemFont(14)
+header.textColor = new Color("fa0019")
 
 //const kfz_name = apiData.data[0].name
 //const fms_status = apiData.data[0].fmsstatus
@@ -59,6 +65,7 @@ for (let i = 0; i < apiData.data.length; i++) {
 label = list.addText(text)
 label.leftAlignText()
 label.font = Font.mediumSystemFont(12) 
+label.textColor = new Color("fa0019")
 
 var heute = new Date();
 console.log(heute.toLocaleString());
@@ -66,6 +73,7 @@ console.log(heute.toLocaleString());
 sub = list.addText("Letztes Update: " + heute.toLocaleString())
 sub.leftAlignText()
 sub.font = Font.mediumSystemFont(12) 
+sub.textColor = new Color("aaa")
 
  
  return list
