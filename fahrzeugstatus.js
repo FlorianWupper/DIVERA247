@@ -30,8 +30,8 @@ async function createWidget(items) {
  header.leftAlignText()
  header.font = Font.mediumSystemFont(10)
 
-var kfz_name = apiData.data[0].name
-var fms_status = apiData.data[0].fmsstatus
+const kfz_name = apiData.data[0].name
+const fms_status = apiData.data[0].fmsstatus
 
 label = list.addText(kfz_name + ": " + fms_status)
 label.centerAlignText()
@@ -40,7 +40,12 @@ label.font = Font.mediumSystemFont(24)
 label = list.addText(apiData.data[1].name + ": " + apiData.data[1].fmsstatus)
 label.centerAlignText()
 label.font = Font.mediumSystemFont(24) 
- 
+
+if(fms_status = 4) {
+    label.textColor = Color.red()
+  } else if(fms_status = 3) {
+    label.textColor = Color.orange()
+  }
  
  return list
 }
