@@ -1,5 +1,14 @@
 ﻿// Licence: Alexander Hartkopf
-const divera247FahrzeugStatusAPI = 'https://app.divera247.com/api/v2/pull/vehicle-status?accesskey='+args.widgetParameter;
+const i = new Request('https://www.divera247.com/downloads/grafik/divera247_app_v2_icon.png')
+
+const j = new Request('https://www.divera247.com/downloads/grafik/divera247_logo_800.png')
+
+const img = await i.loadImage()
+const img2 = await j.loadImage()
+
+
+const divera247FahrzeugStatusAPI = 'https://app.divera247.com/api/v2/pull/vehicle-status?accesskey=1u1WAMOeD8SIu1iqNZ60Afmf2ZFH1RtF3zh3AkhryvCAwaMAG9O9HCAacuc_7GiJ'
+//'+args.widgetParameter;
 
 let widget = await createWidget()
 if (!config.runsInWidget) {
@@ -13,6 +22,11 @@ async function createWidget(items) {
  let apiData, header, label
 
    const list = new ListWidget()
+   let image = list.addImage(img2)
+  image.imageSize = new Size(40,40)
+  image.rightAlignImage()
+  
+  list.addSpacer(2)
 
 
  // fetch vehicle informations
