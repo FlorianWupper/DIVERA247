@@ -18,3 +18,4 @@ Es wird empfohlen den persönlichen APi Schlüssel zu verwenden. Dieser kann in 
 ## future todo
 - [x] Skript zur visualisierung der Fahrzeugstatus (FMS)
 - [ ] Skript zur visualisierung des Nutzerstatus
+- [ ] Schnellesstatussetzen
