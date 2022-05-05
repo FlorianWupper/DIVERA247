@@ -1,10 +1,9 @@
-# DIVERA 24/7 | Scriptable Scripts
+# DIVERA 24/7
 
-In diesem Repository werden alle Skripte für die iOS App Scriptable gesammelt und aktualisiert.
-[Die App kann hier aus dem Appstore geladen werden.](https://apps.apple.com/de/app/scriptable/id1405459188)
+In diesem Repository werden alle Skripte und Kurzbefehle gesammelt und aktualisiert.
+Die Skripte aus dem Ordner "scriptable" benötigen die App "Scriptable" [Die App kann hier aus dem Appstore geladen werden.](https://apps.apple.com/de/app/scriptable/id1405459188)
 
-1. fahrzeugstatus.js
-2. fahrzeugstatus_v2.js
+Die Kurzbefehle benötigen die App "Kurzbefehle". Die App kann über [Diesen Link aus dem AppStore geladen werden.](https://apps.apple.com/de/app/kurzbefehle/id915249334)
 
 
 ## Autorisierung der Skripte
