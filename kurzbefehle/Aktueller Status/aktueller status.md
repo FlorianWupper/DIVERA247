@@ -1,3 +1,4 @@
+## Aktueller Status
 Der Kurzbefehel fragt den aktuellen Status einer Einheit ab und gibt diesen aus.
 
 ## Informationen die benötigt werden:
