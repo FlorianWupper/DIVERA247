@@ -6,7 +6,7 @@ Die Skripte aus dem Ordner "scriptable" benötigen die App "Scriptable" [Die App
 Die Kurzbefehle benötigen die App "Kurzbefehle". Die App kann über [Diesen Link aus dem AppStore geladen werden.](https://apps.apple.com/de/app/kurzbefehle/id915249334)
 
 
-## Autorisierung der Skripte
+## Autorisierung der Skripte (Scriptable)
 Die Skripte sind auf die Nutzung über das Scriptable Widget ausgelegt. Entsprechend wird der Accesskey bei der Konifguration des Widgets in das Feld "Parameter" geschrieben.
 Es wird empfohlen den persönlichen APi Schlüssel zu verwenden. Dieser kann in DIVERA über einen klick auf die eigenen Initialen oben rechts, Einstellungen und Debug abgerufen werden. 
 
