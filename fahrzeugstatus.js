@@ -34,9 +34,9 @@ async function createWidget(items) {
 var kfz_name = apiData.data[0].name
 var fms_status = apiData.data[0].fmsstatus
 
-label += list.addText(kfz_name + ": " + fms_status.toString())
-label.font = Font.mediumSystemFont(10)
-label.leftAlignText()
+label = list.addText(kfz_name + ": " + fms_status)
+label.centerAlignText()
+label.font = Font.mediumSystemFont(24) 
  
 
  return list
