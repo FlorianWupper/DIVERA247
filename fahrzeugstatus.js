@@ -32,7 +32,7 @@ console.log(apiData)
  header.font = Font.mediumSystemFont(12)
 
  var schritt;
- for (schritt = 0; schritt < data.lenght; schritt++) {
+ for (schritt = 0; schritt < apiData.lenght; schritt++) {
     const kfz_name = apiData.data[schritt].name
     const fms = apiData.data[schritt].fmsstatus
 
