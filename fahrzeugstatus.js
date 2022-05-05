@@ -1,5 +1,5 @@
 ﻿// Licence: Alexander Hartkopf
-const divera247FahrzeugStatusAPI = `https://app.divera247.com/api/v2/pull/vehicle-status?accesskey=`+widgetParameter;
+const divera247FahrzeugStatusAPI = `https://app.divera247.com/api/v2/pull/vehicle-status?accesskey=`+args.widgetParameter;
 
 let widget = await createWidget()
 if (!config.runsInWidget) {
