@@ -58,11 +58,11 @@ console.log(data)
  list.addSpacer()
 
 
-/*
- if(incidence >= 50) {
-   label.textColor = Color.red()
- } else if(incidence >= 25) {
+
+ if(fms = 3) {
    label.textColor = Color.orange()
+ } else if(incidence = 4) {
+   label.textColor = Color.red()
  }
 
  const city = list.addText(cityName)
@@ -71,11 +71,11 @@ console.log(data)
  city.textColor = Color.gray()
 
    list.addSpacer()
-
+/*
   label3 = list.addText ("letztes Update: "+lastUpdate.substr(0,10))
  label3.centerAlignText()
  label3.font = Font.mediumSystemFont(6)  
-
 */
+
  return list
 }
