@@ -19,7 +19,7 @@ Script.setWidget(widget)
 Script.complete()
 
 async function createWidget(items) {
- let apiData, header, label
+ let apiData, header, label, sub
 
    const list = new ListWidget()
    let image = list.addImage(img2)
@@ -60,7 +60,12 @@ label = list.addText(text)
 label.leftAlignText()
 label.font = Font.mediumSystemFont(12) 
 
+var heute = new Date();
+console.log(heute.toLocaleString());
 
+sub = list.addText("Letztes Update: " + heute.toLocaleString())
+sub.leftAlignText()
+sub.font = Font.mediumSystemFont(12) 
 
  
  return list
