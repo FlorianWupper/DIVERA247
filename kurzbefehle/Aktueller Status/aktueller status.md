@@ -15,3 +15,4 @@ Der Kurzbefehel fragt den aktuellen Status einer Einheit ab und gibt diesen aus.
 6. Neben dem Accesskey auf den "Kopieren" Button klicken.
 
 ### ID der Status abrufen
+coming soon
