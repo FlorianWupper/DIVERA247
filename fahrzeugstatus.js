@@ -41,36 +41,31 @@ console.log(data)
    return errorList
  }
 
+ 
  header = list.addText("🚒 Fahrzeugstatus ".toUpperCase())
  header.centerAlignText()
- header.font = Font.mediumSystemFont(10)
+ header.font = Font.mediumSystemFont(12)
 
- label = list.addText(data.data[0].name)
- label.font = Font.mediumSystemFont(12)
- label.centerAlignText()
- const fms = data.data[0].fmsstatus
- const Fahrzeugstatus = list.addText(fms.toString())
- Fahrzeugstatus.centerAlignText()
- Fahrzeugstatus.font = Font.mediumSystemFont(20)
- Fahrzeugstatus.textColor = Color.gray()
+ var schritt;
+ for (schritt = 0; schritt < data.lenght; schritt++) {
+    const kfz_name = data.data[schritt].name
+    const fms = data.data[schritt].fmsstatus
+
+    label = list.addText(kfz_name + ": " + fms.toString())
+    label.font = Font.mediumSystemFont(10)
+    label.centerAlignText()
+ }
+
+ 
+
+
+
 
 
  list.addSpacer()
 
+ list.addSpacer()
 
-
- if(fms = 3) {
-   label.textColor = Color.orange()
- } else if(incidence = 4) {
-   label.textColor = Color.red()
- }
-
- const city = list.addText(cityName)
- city.centerAlignText()
- city.font = Font.mediumSystemFont(12)
- city.textColor = Color.gray()
-
-   list.addSpacer()
 /*
   label3 = list.addText ("letztes Update: "+lastUpdate.substr(0,10))
  label3.centerAlignText()
