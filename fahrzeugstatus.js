@@ -25,7 +25,6 @@ async function createWidget(items) {
    errorList.addText("Fehler beim Ausführen.")
    return errorList
  }
-
  
  header = list.addText("🚒 Fahrzeugstatus ".toUpperCase())
  header.leftAlignText()
@@ -37,7 +36,11 @@ var fms_status = apiData.data[0].fmsstatus
 label = list.addText(kfz_name + ": " + fms_status)
 label.centerAlignText()
 label.font = Font.mediumSystemFont(24) 
- 
 
+label = list.addText(apiData.data[1].name + ": " + apiData.data[1].fmsstatus)
+label.centerAlignText()
+label.font = Font.mediumSystemFont(24) 
+ 
+ 
  return list
 }
