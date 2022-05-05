@@ -30,16 +30,21 @@ async function createWidget(items) {
  header.leftAlignText()
  header.font = Font.mediumSystemFont(14)
 
-const kfz_name = apiData.data[0].name
-const fms_status = apiData.data[0].fmsstatus
+//const kfz_name = apiData.data[0].name
+//const fms_status = apiData.data[0].fmsstatus
 
-for (let i = 0; i < apiData.length; i++) {
-    text += apiData.data[i].name + "<br>";
+console.log(apiData)
+console.log("Array Länge: " + apiData.data.length)
+console.log("Beispieldaten: " + apiData.data[0].name)
 
-    label = list.addText(text)
-    label.leftAlignText()
-    label.font = Font.mediumSystemFont(12) 
+var text =""
+for (let i = 0; i < apiData.data.length; i++) {
+    text += apiData.data[i].name + ": " + apiData.data[i].fmsstatus + "\n";
 }
+
+label = list.addText(text)
+label.leftAlignText()
+label.font = Font.mediumSystemFont(12) 
 
 
 
