@@ -33,9 +33,11 @@ async function createWidget(items) {
  // fetch new cases
  data = await new Request(divera247FahrzeugStatusAPI).loadJSON()
 
- if(!data || !data.features || !data.length) {
+console.log(data)
+
+ if(!data || !data.length) {
    const errorList = new ListWidget()
-   errorList.addText("Keine Ergebnisse für die Anfrage nach den Neuinfektionen.")
+   errorList.addText("Fehler.")
    return errorList
  }
 
