@@ -34,11 +34,12 @@ console.log(apiData)
  var schritt;
  for (schritt = 0; schritt < apiData.lenght; schritt++) {
     const kfz_name = apiData.data[schritt].name
-    const fms = apiData.data[schritt].fmsstatus
+    const fms_status = apiData.data[schritt].fmsstatus
 
-    label = list.addText(kfz_name + ": " + fms.toString())
+    label = list.addText(kfz_name + ": " + fms_status.toString())
     label.font = Font.mediumSystemFont(10)
-    label.centerAlignText()
+    label.leftAlignText()
+    console.log
  }
 
  return list
