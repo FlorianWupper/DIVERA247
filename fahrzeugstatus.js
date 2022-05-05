@@ -46,11 +46,11 @@ console.log(data)
  header.font = Font.mediumSystemFont(10)
 
  label = list.addText(data.data[0].name)
- label.font = Font.mediumSystemFont(20)
+ label.font = Font.mediumSystemFont(12)
  label.centerAlignText()
- const country = list.addText("Deutschland")
+ const country = list.addText(data.data[0].fmsstatus)
  country.centerAlignText()
- country.font = Font.mediumSystemFont(12)
+ country.font = Font.mediumSystemFont(20)
  country.textColor = Color.gray()
 
 
